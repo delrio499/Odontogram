@@ -1,0 +1,22 @@
+body{
+    width: 100%;
+    margin: 0;
+}
+.info{
+    border: 1px #ccc solid;
+}
+
+
+.info__div{
+
+    h6{
+        display: inline-block;
+        color: #2323DA;
+
+    }
+    p{
+        display: inline-block;
+        margin-left:4%;
+        font-weight:400;
+    }
+}

@@ -1,0 +1,212 @@
+
+body{
+    width: 100%;
+    height: 100%;
+}
+.icono{
+    width: 100px;
+    height: 100px;
+    /* background-color: #3B46D8 ; */
+    border-radius: 3px;
+    margin-left: 6rem;
+    margin-bottom: 1rem;
+}
+
+.cuerpo{
+    width: 99%;
+    margin-top: 0rem;
+    margin-left: 8px;
+}
+.rectangulo_navbar{
+    width: 13rem;
+    height: 1rem;
+    top: 0.9rem;
+    background-color:#2A39FF;
+    position: absolute; 
+    transform:rotate(2deg);
+    z-index: -1;
+}
+#rojoss{
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+}
+
+label{
+    font-size: 15px;
+    color:#034076 ;
+    font-weight: 500;
+
+}
+.input{
+    display: inline-block;
+    position: relative;
+    width:47%;
+    margin-left:1.7rem;
+    margin-top: 0.3em;
+}
+.sub-title{
+    font-size: 1.3em;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+    margin-left: 2rem;
+    color: white;
+    background-color:#26196E;
+    font-weight: 400;
+    position: absolute;
+
+    
+}
+.info{
+    border: #26196E 1px solid;
+    border-radius: 0.3em;
+    padding: 0.3rem;
+    width: 16.3rem;
+}
+
+.anamnesis{
+    border: #26196E 1px solid;
+    border-radius: 0.3em;
+    padding: 0.4rem;
+    width: 8.3rem;
+
+}
+.odontograma{
+    border: #26196E 1px solid;
+    border-radius: 0.3em;
+    padding: 0.4rem;
+    width: 11rem;
+}
+.endodoncia{
+    border: #26196E 1px solid;
+    border-radius: 0.3em;
+    padding: 0.4rem;
+    margin-top: 5rem;
+    width: 9.5rem;
+}
+
+#info-personal{
+    margin: 3.5em 1.2rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 2rem 2.4rem;
+}
+
+#anamnesis{
+    margin: 7em 1.2rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 1.5rem 2.4rem;
+}
+#anamnesis p{
+    font-weight: 500;
+    color: #034076;
+}
+
+
+#anamnesis_izquierda{
+    width: 48%;
+    display: inline-block;
+    position: relative;
+    margin-left: 1.3em;
+}
+#anamnesis_derecha{
+    width: 48%;
+    display: inline-block;
+    position: relative;
+    margin-left: 1.3em;
+}
+#odontograma{
+   
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 1rem 0rem;
+    margin: 0em 1.2rem;
+    margin-top: 10.5rem;
+   
+}
+.cambiacolor{
+    position: relative;
+    display: block;
+    padding-left: 3rem;
+}
+.colorpicker{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: inline-block;
+    border: black 1px solid;
+    border-radius: 8px;
+}
+#yellow{
+    background-color: #ffff40;
+}
+#red{
+    background-color: #ff0000;
+}
+#blue{
+    background-color: #00c3f8;
+}
+#black{
+    background-color: #0d0d0d;
+}
+#delete{
+
+}
+.dientes{ 
+    margin-top:1rem;
+ 
+    position: relative;
+    display: inline-block;
+   
+}
+.dientes_cuadranteuno{ 
+    margin-top:4rem;
+    padding-left: 5rem;
+    position: relative;
+    display: inline-block;
+   
+}
+.dientes_cuadrantedos{ 
+    margin-top:4rem;
+    padding-left: 5rem;
+    position: relative;
+    display: inline-block;
+   
+}
+.dientes_cuadrantecuatro{ 
+    
+    padding-left: 5rem;
+    position: relative;
+    display: inline-block;
+   
+}
+.dientes_cuadrantetres{ 
+
+    padding-left: 5rem;
+    position: relative;
+    display: inline-block;
+   
+}
+
+
+#endodoncia{
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 1rem 0rem;
+    margin: 0em 1.2rem;
+    margin-top: 6.5rem;
+  
+    
+    
+}
+#diagnostico{
+    margin: 2rem;
+    width: 95%;
+}
+
+.boton{
+    margin-top: 12rem;
+    position: relative;
+    display: inline-block;
+}

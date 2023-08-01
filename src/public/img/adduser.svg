@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="177.565" height="211" viewBox="0 0 177.565 211">
+  <g id="agregar-usuario_1_" data-name="agregar-usuario (1)" transform="translate(-74.435 -229)">
+    <path id="Path_2" data-name="Path 2" d="M40,290.369C40,236.62,70.348,200,107.782,200s67.782,36.62,67.782,90.369c0,0-30.81,20.854-67.782,20.854C73.891,311.224,40,290.369,40,290.369Z" transform="translate(34.435 116.776)" fill="#fff"/>
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="42.5" cy="42.5" r="42.5" transform="translate(100 229)" fill="#fff"/>
+    <ellipse id="Ellipse_2" data-name="Ellipse 2" cx="42.5" cy="40.5" rx="42.5" ry="40.5" transform="translate(167 359)" fill="#1946df"/>
+    <g id="Group_1" data-name="Group 1" transform="translate(184.239 370.58)">
+      <path id="Path_3" data-name="Path 3" d="M368,380.42c-4.418,0-8-1.691-8-3.776V323.776c0-2.086,3.582-3.776,8-3.776s8,1.691,8,3.776v52.867C376,378.729,372.418,380.42,368,380.42Z" transform="translate(-341.426 -320)" fill="#fff"/>
+      <path id="Path_4" data-name="Path 4" d="M353.826,392h-46.5c-1.835,0-3.322-3.582-3.322-8s1.487-8,3.322-8h46.5c1.835,0,3.322,3.582,3.322,8S355.661,392,353.826,392Z" transform="translate(-304 -353.79)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

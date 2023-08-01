@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAA;EACA,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,CAAC;CACZ;;AACD,AAAA,KAAK,CAAA;EACD,MAAM,EAAE,cAAc;CACzB;;AAGD,AAEI,UAFM,CAEN,EAAE,CAAA;EACE,OAAO,EAAE,YAAY;EACrB,KAAK,EAAE,OAAO;CAEjB;;AANL,AAOI,UAPM,CAON,CAAC,CAAA;EACG,OAAO,EAAE,YAAY;EACrB,WAAW,EAAC,EAAE;EACd,WAAW,EAAC,GAAG;CAClB",
+    "sources": [
+        "historiacli.scss"
+    ],
+    "names": [],
+    "file": "historiacli.css"
+}

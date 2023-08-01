@@ -1,0 +1,77 @@
+body{
+    
+    background-color: #076ACC;
+}
+.cuerpo{
+    background-color: #076ACC;
+    height: 100vh;
+    width: 80vw;
+    padding-left: 15rem;
+    
+}
+
+nav{
+    color: white;
+    background-color: #076ACC;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    font-size: 23px;
+}
+nav a{
+    
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+}
+nav a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.iconos{
+    display: inline-block;
+    position: relative;
+    width: 49%;
+    padding-left: 10rem;
+    margin-top: 3rem;
+}
+.icono{
+    width: 150px;
+    height: 150px;
+}
+.links{
+   
+    display: inline-block;
+    position: relative;
+    width: 49.6%;
+    height: 4rem;
+    padding-top: 1rem;
+    padding-left: 8.5rem;
+}
+
+.links a,.link_calendario a{
+
+
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+
+.citas{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-left: 24rem;
+    margin-top: 4rem;
+}
+.link_calendario{
+
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 4rem;
+    margin-top: 0rem;
+    padding-top: 1rem;
+}

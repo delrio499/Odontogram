@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUD nodejs</title>
+  
+     <link rel="stylesheet"   href="../public/bootstrap/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="../public/css/add.css">
+    <script src="https://unpkg.com/konva@4.0.0/konva.min.js"></script>
+    
+ 
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark mb-4" style="z-index: 2;">
+        <a href="/" class="navbar-brand" style="font-size: 25px; ">BD Gane Salud Oral</a>
+        <div class="rectangulo_navbar"></div>
+    </nav>
+  
+    
+
+ <div class="cuerpo">
+    <div class="card">
+       
+            <form action="/add" method="POST" class="" name="datos">
+                 <h2 class="sub-title info">INFORMACIÓN PERSONAL</h2>
+                <div id="info-personal">
+
+                <div class="input">
+                    <label for="nombres" class="">Nombres:</label>
+                    <input type="text" name="nombres" id="nombres"class="form-control" required>
+                </div>
+                <div class="input">
+                  <label for="apellidos" class="">Apellidos:</label>
+                    <input type="text" name="apellidos" id="apellidos"  class="form-control" required>
+                </div>
+                <div class="input">
+                        <label for="documento" class="">Documento de identidad:</label>
+                          <input type="text" name="documento" id="documento"  class="form-control" required>
+                      </div>
+              <div class="input">
+                    <label for="fech_nac" class="">Fecha de Nacimiento</label>
+                    <input type="date" name="fech_nac" id="fech_nac" class="form-control" required>
+                </div>  
+                <div class="input">
+                    <label for="ocupacion" class="">Ocupación:</label>
+                    <input type="text" name="ocupacion" id="ocupacion"  class="form-control" required>
+                </div>
+                <div class="input">
+                    <label for="direccion" class="">Dirección:</label>
+                    <input type="text" name="direccion" id="direccion" class="form-control" required>
+                </div>
+                <div class="input">
+                    <label for="telefono" class="">Teléfono Fijo:</label>
+                    <input type="text" name="telefono" id="telefono"  class="form-control" required>
+                </div>
+                <div class="input">
+                    <label for="email" class="">Correo electrónico:</label>
+                    <input type="text" name="email" id="email" class="form-control" required>
+                </div>
+                <div class="input">
+                    <label for="celular" class="">Celular:</label>
+                    <input type="text" name="celular" id="celular" class="form-control" required>
+                </div>
+                
+                <div class="input">
+                    <label for="motivo" class=""> Motivo de la Consulta:</label>
+                    <textarea name="motivo"  cols="80" id="motivo" class="form-control" placeholder="instert a description" required></textarea>
+                </div>
+        </div>
+                <h2 class="sub-title anamnesis">ANAMNESIS</h2>
+                <section id="anamnesis">
+
+                <div id="anamnesis_izquierda">
+                    <p> 1. Está bajo tratamiento médico</p>
+                    <input type="radio" id="si" name="item1" value="Sí" >
+                            <label for="si">Sí</label>
+                    <input type="radio" id="no" name="item1" value="No" checked>
+                            <label for="no">No</label><br>
+                
+               
+                    <p> 2. Está tomando algún medicamento</p>
+                    <input type="radio" id="si1" name="item2" value="Sí">
+                            <label for="si1">Sí</label>
+                    <input type="radio" id="no1" name="item2" value="No" checked>
+                            <label for="no1">No</label><br>
+                
+                    <p> 3. Reacciones Alérgicas</p>
+                    <input type="radio" id="si2" name="item3" value="Sí">
+                            <label for="si2">Sí</label>
+                    <input type="radio" id="no2" name="item3" value="No" checked>
+                            <label for="no2">No</label><br>
+               
+                    <p> 4. Hemorragias</p>
+                    <input type="radio" id="si3" name="item4" value="Sí">
+                            <label for="si3">Sí</label>
+                    <input type="radio" id="no3" name="item4" value="No" checked>
+                            <label for="no3">No</label><br>
+               
+                    <p> 5. Irradiación</p>
+                    <input type="radio" id="si4" name="item5" value="Sí">
+                            <label for="si4">Sí</label>
+                    <input type="radio" id="no4" name="item5" value="No" checked>
+                            <label for="no4">No</label><br>
+                
+                    <p> 6. Hipo ó Hipertensión Arterial</p>
+                    <input type="radio" id="si5" name="item6" value="Sí">
+                            <label for="si5">Sí</label>
+                    <input type="radio" id="no5" name="item6" value="No" checked>
+                            <label for="no5">No</label><br>
+                </div>
+                <div id="anamnesis_derecha">
+
+                    <p> 7. Sinusitis</p>
+                    <input type="radio" id="si6" name="item7" value="Sí">
+                            <label for="si6">Sí</label>
+                    <input type="radio" id="no6" name="item7" value="No" checked>
+                            <label for="no6">No</label><br>
+               
+                    <p> 8. Enfermedades Respiratorias</p>
+                    <input type="radio" id="si7" name="item8" value="Sí">
+                            <label for="si7">Sí</label>
+                    <input type="radio" id="no7" name="item8" value="No" checked>
+                            <label for="no7">No</label><br>
+               
+                    <p> 9. Cardiopatia</p>
+                    <input type="radio" id="si8" name="item9" value="Sí">
+                            <label for="si8">Sí</label>
+                    <input type="radio" id="no8" name="item9" value="No" checked>
+                            <label for="no8">No</label><br>
+               
+                    <p> 10. Diabetes</p>
+                    <input type="radio" id="si9" name="item10" value="Sí">
+                            <label for="si9">Sí</label>
+                    <input type="radio" id="no9" name="item10" value="No" checked>
+                            <label for="no9">No</label><br>
+               
+                    <p> 11. Fiebre Reumática</p>
+                    <input type="radio" id="si10" name="item11" value="Sí">
+                            <label for="si10">Sí</label>
+                    <input type="radio" id="no10" name="item11" value="No" checked>
+                            <label for="no10">No</label><br>
+                
+                    <p> 12. Hepatitis</p>
+                    <input type="radio" id="si11" name="item12" value="Sí">
+                            <label for="si11">Sí</label>
+                    <input type="radio" id="no11" name="item12" value="No" checked>
+                            <label for="no11">No</label><br>
+                </div>
+                </section>
+                <h2 class="sub-title odontograma">ODONTOGRAMA</h2>
+                    <div id="odontograma" >
+                                <div class="cambiacolor">
+                                      <h5>Selector de color</h5>
+                                      <div id="yellow"  class="colorpicker"></div>
+                                      <input id="amarillo" type="checkbox" value="#ffff40" >
+                        <div id="red"  class="colorpicker"></div>
+                        <input id="rojo" type="checkbox" value="#ff0000" >
+                        <div id="black"  class="colorpicker"></div>
+                        <input id="negro" type="checkbox" value="#0d0d0d" >
+                        <div id="blue"  class="colorpicker"></div>
+                        <input id="azul" type="checkbox" value="#00c3f8" >
+                        <div id="delete"  class="colorpicker"></div>
+                        <input id="borrar" type="checkbox" value="#FFFAFA" >
+                                </div>
+                              <div class="dientes_cuadranteuno">
+                       <div id="diente18" class="dientes"></div>
+                       <div id="diente17" class="dientes"></div>
+                       <div id="diente16" class="dientes"></div>
+                       <div id="diente15" class="dientes"></div>
+                       <div id="diente14" class="dientes"></div>
+                       <div id="diente13" class="dientes"></div>
+                       <div id="diente12" class="dientes"></div>
+                       <div id="diente11" class="dientes"></div>
+                               </div>
+
+                                <div class="dientes_cuadrantedos" >
+                       <div id="diente21" class="dientes"></div>
+                       <div id="diente22" class="dientes"></div>
+                       <div id="diente23" class="dientes"></div>
+                       <div id="diente24" class="dientes"></div>
+                       <div id="diente25" class="dientes"></div>
+                       <div id="diente26" class="dientes"></div>
+                       <div id="diente27" class="dientes"></div>
+                       <div id="diente28" class="dientes"></div>
+                                </div>
+                                <div class="dientes_cuadrantecuatro">
+                       <div id="diente48" class="dientes"></div>
+                       <div id="diente47" class="dientes"></div>
+                       <div id="diente46" class="dientes"></div>
+                       <div id="diente45" class="dientes"></div>
+                       <div id="diente44" class="dientes"></div>
+                       <div id="diente43" class="dientes"></div>
+                       <div id="diente42" class="dientes"></div>
+                       <div id="diente41" class="dientes"></div>
+                                  </div>
+                                  <div class="dientes_cuadrantetres">
+                       <div id="diente31" class="dientes"></div>
+                       <div id="diente32" class="dientes"></div>
+                       <div id="diente33" class="dientes"></div>
+                       <div id="diente34" class="dientes"></div>
+                       <div id="diente35" class="dientes"></div>
+                       <div id="diente36" class="dientes"></div>
+                       <div id="diente37" class="dientes"></div>
+                       <div id="diente38" class="dientes"></div>
+                                    </div>
+                        
+
+
+
+                    </div>
+                    <input type="hidden" name="superior_arriba18" id="superior_arriba18" value="" >
+                    <input type="hidden" name="superior_arriba17" id="superior_arriba17" value="" >
+                    <input type="hidden" name="superior_arriba16" id="superior_arriba16" value="" >
+                    <input type="hidden" name="superior_arriba15" id="superior_arriba15" value="" >
+                    <input type="hidden" name="superior_arriba14" id="superior_arriba14"value="" >
+                    <input type="hidden" name="superior_arriba13" id="superior_arriba13" value="" >
+                    <input type="hidden" name="superior_arriba12" id="superior_arriba12" value="" >
+                    <input type="hidden" name="superior_arriba11" id="superior_arriba11" value="" >
+                    <input type="hidden" name="superior_arriba21" id="superior_arriba21"value="" >
+                    <input type="hidden" name="superior_arriba22" id="superior_arriba22"value="" >
+                    <input type="hidden" name="superior_arriba23" id="superior_arriba23"value="" >
+                    <input type="hidden" name="superior_arriba24" id="superior_arriba24"value="" >
+                    <input type="hidden" name="superior_arriba25" id="superior_arriba25"value="" >
+                    <input type="hidden" name="superior_arriba26" id="superior_arriba26"value="" >
+                    <input type="hidden" name="superior_arriba27" id="superior_arriba27"value="" >
+                    <input type="hidden" name="superior_arriba28" id="superior_arriba28"value="" >
+                    <input type="hidden" name="superior_arriba48" id="superior_arriba48"value="" >
+                    <input type="hidden" name="superior_arriba47" id="superior_arriba47"value="" >
+                    <input type="hidden" name="superior_arriba46" id="superior_arriba46"value="" >
+                    <input type="hidden" name="superior_arriba45" id="superior_arriba45"value="" >
+                    <input type="hidden" name="superior_arriba44"id="superior_arriba44" value="" >
+                    <input type="hidden" name="superior_arriba43" id="superior_arriba43"value="" >
+                    <input type="hidden" name="superior_arriba42"id="superior_arriba42" value="" >
+                    <input type="hidden" name="superior_arriba41" id="superior_arriba41"value="" >
+                    <input type="hidden" name="superior_arriba31" id="superior_arriba31"value="" >
+                    <input type="hidden" name="superior_arriba32" id="superior_arriba32"value="" >
+                    <input type="hidden" name="superior_arriba33" id="superior_arriba33"value="" >
+                    <input type="hidden" name="superior_arriba34" id="superior_arriba34"value="" >
+                    <input type="hidden" name="superior_arriba35" id="superior_arriba35"value="" >
+                    <input type="hidden" name="superior_arriba36" id="superior_arriba36"value="" >
+                    <input type="hidden" name="superior_arriba37" id="superior_arriba37"value="" >
+                    <input type="hidden" name="superior_arriba38" id="superior_arriba38"value="" >
+                    <input type="hidden" name="inferior_arriba18" id="inferior_arriba18"value="" >
+                    <input type="hidden" name="inferior_arriba17" id="inferior_arriba17"value="" >
+                    <input type="hidden" name="inferior_arriba16" id="inferior_arriba16"value="" >
+                    <input type="hidden" name="inferior_arriba15" id="inferior_arriba15"value="" >
+                    <input type="hidden" name="inferior_arriba14" id="inferior_arriba14"value="" >
+                    <input type="hidden" name="inferior_arriba13" id="inferior_arriba13"value="" >
+                    <input type="hidden" name="inferior_arriba12" id="inferior_arriba12"value="" >
+                    <input type="hidden" name="inferior_arriba11" id="inferior_arriba11"value="" >
+                    <input type="hidden" name="inferior_arriba21" id="inferior_arriba21"value="" >
+                    <input type="hidden" name="inferior_arriba22" id="inferior_arriba22"value="" >
+                    <input type="hidden" name="inferior_arriba23" id="inferior_arriba23"value="" >
+                    <input type="hidden" name="inferior_arriba24" id="inferior_arriba24"value="" >
+                    <input type="hidden" name="inferior_arriba25" id="inferior_arriba25"value="" >
+                    <input type="hidden" name="inferior_arriba26" id="inferior_arriba26"value="" >
+                    <input type="hidden" name="inferior_arriba27" id="inferior_arriba27"value="" >
+                    <input type="hidden" name="inferior_arriba28" id="inferior_arriba28"value="" >
+                    <input type="hidden" name="inferior_arriba47" id="inferior_arriba48"value="" >
+                    <input type="hidden" name="inferior_arriba48" id="inferior_arriba47"value="" >
+                    <input type="hidden" name="inferior_arriba46" id="inferior_arriba46"value="" >
+                    <input type="hidden" name="inferior_arriba45" id="inferior_arriba45"value="" >
+                    <input type="hidden" name="inferior_arriba44" id="inferior_arriba44"value="" >
+                    <input type="hidden" name="inferior_arriba43" id="inferior_arriba43"value="" >
+                    <input type="hidden" name="inferior_arriba42" id="inferior_arriba42"value="" >
+                    <input type="hidden" name="inferior_arriba41" id="inferior_arriba41"value="" >
+                    <input type="hidden" name="inferior_arriba31" id="inferior_arriba31"value="" >
+                    <input type="hidden" name="inferior_arriba32" id="inferior_arriba32"value="" >
+                    <input type="hidden" name="inferior_arriba33" id="inferior_arriba33"value="" >
+                    <input type="hidden" name="inferior_arriba34" id="inferior_arriba34"value="" >
+                    <input type="hidden" name="inferior_arriba35" id="inferior_arriba35"value="" >
+                    <input type="hidden" name="inferior_arriba36" id="inferior_arriba36"value="" >
+                    <input type="hidden" name="inferior_arriba37" id="inferior_arriba37"value="" >
+                    <input type="hidden" name="inferior_arriba38" id="inferior_arriba38"value="" >
+                    <input type="hidden" name="izquierda18" id="izquierda18"value="" >
+                    <input type="hidden" name="izquierda17" id="izquierda17"value="" >
+                    <input type="hidden" name="izquierda16" id="izquierda16"value="" >
+                    <input type="hidden" name="izquierda15" id="izquierda15"value="" >
+                    <input type="hidden" name="izquierda14" id="izquierda14"value="" >
+                    <input type="hidden" name="izquierda13" id="izquierda13"value="" >
+                    <input type="hidden" name="izquierda12" id="izquierda12"value="" >
+                    <input type="hidden" name="izquierda11" id="izquierda11"value="" >
+                    <input type="hidden" name="izquierda21" id="izquierda21"value="" >
+                    <input type="hidden" name="izquierda22" id="izquierda22"value="" >
+                    <input type="hidden" name="izquierda23" id="izquierda23"value="" >
+                    <input type="hidden" name="izquierda24" id="izquierda24"value="" >
+                    <input type="hidden" name="izquierda25" id="izquierda25"value="" >
+                    <input type="hidden" name="izquierda26" id="izquierda26"value="" >
+                    <input type="hidden" name="izquierda27" id="izquierda27"value="" >
+                    <input type="hidden" name="izquierda28" id="izquierda28"value="" >
+                    <input type="hidden" name="izquierda48" id="izquierda48"value="" >
+                    <input type="hidden" name="izquierda47" id="izquierda47"value="" >
+                    <input type="hidden" name="izquierda46" id="izquierda46"value="" >
+                    <input type="hidden" name="izquierda45" id="izquierda45"value="" >
+                    <input type="hidden" name="izquierda44" id="izquierda44"value="" >
+                    <input type="hidden" name="izquierda43" id="izquierda43"value="" >
+                    <input type="hidden" name="izquierda42" id="izquierda42"value="" >
+                    <input type="hidden" name="izquierda41" id="izquierda41"value="" >
+                    <input type="hidden" name="izquierda31" id="izquierda31"value="" >
+                    <input type="hidden" name="izquierda32" id="izquierda32"value="" >
+                    <input type="hidden" name="izquierda33" id="izquierda33"value="" >
+                    <input type="hidden" name="izquierda34" id="izquierda34"value="" >
+                    <input type="hidden" name="izquierda35" id="izquierda35"value="" >
+                    <input type="hidden" name="izquierda36" id="izquierda36"value="" >
+                    <input type="hidden" name="izquierda37" id="izquierda37"value="" >
+                    <input type="hidden" name="izquierda38" id="izquierda38"value="" >
+                    <input type="hidden" name="centro18" id="centro18"value="" >
+                    <input type="hidden" name="centro17" id="centro17"value="" >
+                    <input type="hidden" name="centro16" id="centro16"value="" >
+                    <input type="hidden" name="centro15" id="centro15"value="" >
+                    <input type="hidden" name="centro14" id="centro14"value="" >
+                    <input type="hidden" name="centro13" id="centro13"value="" >
+                    <input type="hidden" name="centro12" id="centro12"value="" >
+                    <input type="hidden" name="centro11" id="centro11"value="" >
+                    <input type="hidden" name="centro21" id="centro21"value="" >
+                    <input type="hidden" name="centro22" id="centro22"value="" >
+                    <input type="hidden" name="centro23" id="centro23"value="" >
+                    <input type="hidden" name="centro24" id="centro24"value="" >
+                    <input type="hidden" name="centro25" id="centro25"value="" >
+                    <input type="hidden" name="centro26" id="centro26"value="" >
+                    <input type="hidden" name="centro27" id="centro27"value="" >
+                    <input type="hidden" name="centro28" id="centro28"value="" >
+                    <input type="hidden" name="centro48" id="centro48"value="" >
+                    <input type="hidden" name="centro47" id="centro47"value="" >
+                    <input type="hidden" name="centro46" id="centro46"value="" >
+                    <input type="hidden" name="centro45" id="centro45"value="" >
+                    <input type="hidden" name="centro44" id="centro44"value="" >
+                    <input type="hidden" name="centro43" id="centro43"value="" >
+                    <input type="hidden" name="centro42" id="centro42"value="" >
+                    <input type="hidden" name="centro41" id="centro41"value="" >
+                    <input type="hidden" name="centro31" id="centro31"value="" >
+                    <input type="hidden" name="centro32" id="centro32"value="" >
+                    <input type="hidden" name="centro33" id="centro33"value="" >
+                    <input type="hidden" name="centro34" id="centro34"value="" >
+                    <input type="hidden" name="centro35" id="centro35"value="" >
+                    <input type="hidden" name="centro36" id="centro36"value="" >
+                    <input type="hidden" name="centro37" id="centro37"value="" >
+                    <input type="hidden" name="centro38" id="centro38"value="" >
+                    <input type="hidden" name="superior_abajo18" id="superior_abajo18" value="" >
+                    <input type="hidden" name="superior_abajo17" id="superior_abajo17"value="" >
+                    <input type="hidden" name="superior_abajo16" id="superior_abajo16"value="" >
+                    <input type="hidden" name="superior_abajo15" id="superior_abajo15"value="" >
+                    <input type="hidden" name="superior_abajo14" id="superior_abajo14"value="" >
+                    <input type="hidden" name="superior_abajo13" id="superior_abajo13"value="" >
+                    <input type="hidden" name="superior_abajo12" id="superior_abajo12"value="" >
+                    <input type="hidden" name="superior_abajo11" id="superior_abajo11"value="" >
+                    <input type="hidden" name="superior_abajo21" id="superior_abajo21"value="" >
+                    <input type="hidden" name="superior_abajo22" id="superior_abajo22"value="" >
+                    <input type="hidden" name="superior_abajo23" id="superior_abajo23"value="" >
+                    <input type="hidden" name="superior_abajo24" id="superior_abajo24"value="" >
+                    <input type="hidden" name="superior_abajo25" id="superior_abajo25"value="" >
+                    <input type="hidden" name="superior_abajo26" id="superior_abajo26"value="" >
+                    <input type="hidden" name="superior_abajo27" id="superior_abajo27"value="" >
+                    <input type="hidden" name="superior_abajo28" id="superior_abajo28"value="" >
+                    <input type="hidden" name="superior_abajo48" id="superior_abajo48"value="" >
+                    <input type="hidden" name="superior_abajo47" id="superior_abajo47"value="" >
+                    <input type="hidden" name="superior_abajo46" id="superior_abajo46"value="" >
+                    <input type="hidden" name="superior_abajo45" id="superior_abajo45"value="" >
+                    <input type="hidden" name="superior_abajo44" id="superior_abajo44"value="" >
+                    <input type="hidden" name="superior_abajo43" id="superior_abajo43"value="" >
+                    <input type="hidden" name="superior_abajo42" id="superior_abajo42"value="" >
+                    <input type="hidden" name="superior_abajo41" id="superior_abajo41"value="" >
+                    <input type="hidden" name="superior_abajo31" id="superior_abajo31"value="" >
+                    <input type="hidden" name="superior_abajo32" id="superior_abajo32"value="" >
+                    <input type="hidden" name="superior_abajo33" id="superior_abajo33"value="" >
+                    <input type="hidden" name="superior_abajo34" id="superior_abajo34"value="" >
+                    <input type="hidden" name="superior_abajo35" id="superior_abajo35"value="" >
+                    <input type="hidden" name="superior_abajo36" id="superior_abajo36"value="" >
+                    <input type="hidden" name="superior_abajo37" id="superior_abajo37"value="" >
+                    <input type="hidden" name="superior_abajo38" id="superior_abajo38"value="" >
+                    <input type="hidden" name="inferior_abajo18" id="inferior_abajo18"value="" >
+                    <input type="hidden" name="inferior_abajo17" id="inferior_abajo17"value="" >
+                    <input type="hidden" name="inferior_abajo16" id="inferior_abajo16"value="" >
+                    <input type="hidden" name="inferior_abajo15" id="inferior_abajo15"value="" >
+                    <input type="hidden" name="inferior_abajo14" id="inferior_abajo14"value="" >
+                    <input type="hidden" name="inferior_abajo13" id="inferior_abajo13"value="" >
+                    <input type="hidden" name="inferior_abajo12" id="inferior_abajo12"value="" >
+                    <input type="hidden" name="inferior_abajo11" id="inferior_abajo11"value="" >
+                    <input type="hidden" name="inferior_abajo21" id="inferior_abajo21"value="" >
+                    <input type="hidden" name="inferior_abajo22" id="inferior_abajo22"value="" >
+                    <input type="hidden" name="inferior_abajo23" id="inferior_abajo23"value="" >
+                    <input type="hidden" name="inferior_abajo24" id="inferior_abajo24"value="" >
+                    <input type="hidden" name="inferior_abajo25" id="inferior_abajo25"value="" >
+                    <input type="hidden" name="inferior_abajo26" id="inferior_abajo26"value="" >
+                    <input type="hidden" name="inferior_abajo27" id="inferior_abajo27"value="" >
+                    <input type="hidden" name="inferior_abajo28" id="inferior_abajo28"value="" >
+                    <input type="hidden" name="inferior_abajo48" id="inferior_abajo48"value="" >
+                    <input type="hidden" name="inferior_abajo47" id="inferior_abajo47"value="" >
+                    <input type="hidden" name="inferior_abajo46" id="inferior_abajo46"value="" >
+                    <input type="hidden" name="inferior_abajo45" id="inferior_abajo45"value="" >
+                    <input type="hidden" name="inferior_abajo44" id="inferior_abajo44"value="" >
+                    <input type="hidden" name="inferior_abajo43" id="inferior_abajo43"value="" >
+                    <input type="hidden" name="inferior_abajo42" id="inferior_abajo42"value="" >
+                    <input type="hidden" name="inferior_abajo41" id="inferior_abajo41"value="" >
+                    <input type="hidden" name="inferior_abajo31" id="inferior_abajo31"value="" >
+                    <input type="hidden" name="inferior_abajo32" id="inferior_abajo32"value="" >
+                    <input type="hidden" name="inferior_abajo33" id="inferior_abajo33"value="" >
+                    <input type="hidden" name="inferior_abajo34" id="inferior_abajo34"value="" >
+                    <input type="hidden" name="inferior_abajo35" id="inferior_abajo35"value="" >
+                    <input type="hidden" name="inferior_abajo36" id="inferior_abajo36"value="" >
+                    <input type="hidden" name="inferior_abajo37" id="inferior_abajo37"value="" >
+                    <input type="hidden" name="inferior_abajo38" id="inferior_abajo38"value="" >
+                    <input type="hidden" name="derecha18" id="derecha18" value="" >
+                    <input type="hidden" name="derecha17" id="derecha17"value="" >
+                    <input type="hidden" name="derecha16" id="derecha16"value="" >
+                    <input type="hidden" name="derecha15" id="derecha15"value="" >
+                    <input type="hidden" name="derecha14" id="derecha14"value="" >
+                    <input type="hidden" name="derecha13" id="derecha13"value="" >
+                    <input type="hidden" name="derecha12" id="derecha12"value="" >
+                    <input type="hidden" name="derecha11" id="derecha11"value="" >
+                    <input type="hidden" name="derecha21" id="derecha21"value="" >
+                    <input type="hidden" name="derecha22" id="derecha22"value="" >
+                    <input type="hidden" name="derecha23" id="derecha23"value="" >
+                    <input type="hidden" name="derecha24" id="derecha24"value="" >
+                    <input type="hidden" name="derecha25" id="derecha25"value="" >
+                    <input type="hidden" name="derecha26" id="derecha26"value="" >
+                    <input type="hidden" name="derecha27" id="derecha27"value="" >
+                    <input type="hidden" name="derecha28" id="derecha28"value="" >
+                    <input type="hidden" name="derecha48" id="derecha48"value="" >
+                    <input type="hidden" name="derecha47" id="derecha47"value="" >
+                    <input type="hidden" name="derecha46" id="derecha46"value="" >
+                    <input type="hidden" name="derecha45" id="derecha45"value="" >
+                    <input type="hidden" name="derecha44" id="derecha44"value="" >
+                    <input type="hidden" name="derecha43" id="derecha43"value="" >
+                    <input type="hidden" name="derecha42" id="derecha42"value="" >
+                    <input type="hidden" name="derecha41" id="derecha41"value="" >
+                    <input type="hidden" name="derecha31" id="derecha31"value="" >
+                    <input type="hidden" name="derecha32" id="derecha32"value="" >
+                    <input type="hidden" name="derecha33" id="derecha33"value="" >
+                    <input type="hidden" name="derecha34" id="derecha34"value="" >
+                    <input type="hidden" name="derecha35" id="derecha35"value="" >
+                    <input type="hidden" name="derecha36" id="derecha36"value="" >
+                    <input type="hidden" name="derecha37" id="derecha37"value="" >
+                    <input type="hidden" name="derecha38" id="derecha38"value="" >
+                
+
+                    <h2 class="sub-title endodoncia">ENDODONCIA</h2>
+                    <section id="endodoncia">
+                         <table class="table">
+                    <thead  class="thead-light">
+                        <tr>
+                            <th># DE DIENTE</th>
+                            <th>m.m</th>
+                            <th>LIMA</th>
+                            <th>C.R</th>
+                            <th>CONDUCTO</th>
+                            <th># DE RADIOGRAFIA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                    <td><input type="text"name="endodoncia1_1"></td>
+                                    <td><input type="text"name="endodoncia1_2"></td>
+                                    <td><input type="text"name="endodoncia1_3"></td>
+                                    <td><input type="text"name="endodoncia1_4"></td>
+                                    <td><input type="text"name="endodoncia1_5"></td>
+                                    <td><input type="text"name="endodoncia1_6"></td>
+
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="endodoncia2_1"></td>
+                                <td><input type="text" name="endodoncia2_2"></td>
+                                <td><input type="text" name="endodoncia2_3"></td>
+                                <td><input type="text" name="endodoncia2_4"></td>
+                                <td><input type="text" name="endodoncia2_5"></td>
+                                <td><input type="text" name="endodoncia2_6"></td>
+                        </tr> 
+                        <tr>
+                                <td><input type="text" name="endodoncia3_1"></td>
+                                <td><input type="text" name="endodoncia3_2"></td>
+                                <td><input type="text" name="endodoncia3_3"></td>
+                                <td><input type="text" name="endodoncia3_4"></td>
+                                <td><input type="text" name="endodoncia3_5"></td>
+                                <td><input type="text" name="endodoncia3_6"></td>
+                        </tr>
+                        <tr>
+                                <td><input type="text" name="endodoncia4_1"></td>
+                                <td><input type="text" name="endodoncia4_2"></td>
+                                <td><input type="text" name="endodoncia4_3"></td>
+                                <td><input type="text" name="endodoncia4_4"></td>
+                                <td><input type="text" name="endodoncia4_5"></td>
+                                <td><input type="text" name="endodoncia4_6"></td>
+                        </tr>
+                        <tr>
+                                <td><input type="text" name="endodoncia5_1"></td>
+                                <td><input type="text" name="endodoncia5_2"></td>
+                                <td><input type="text" name="endodoncia5_3"></td>
+                                <td><input type="text" name="endodoncia5_4"></td>
+                                <td><input type="text" name="endodoncia5_5"></td>
+                                <td><input type="text" name="endodoncia5_6"></td>
+                        </tr>
+                    </tbody>
+                         </table>
+                </section>
+
+                <h2 class="sub-title endodoncia" style="width: 10rem; text-align: center;">DIAGNÓSTICO</h2>
+                <section id="endodoncia" style="margin: 0em 1.2rem; margin-top: 6.5rem;" >
+
+                        <textarea name="diagnostico"  cols="80" id="diagnostico" class="form-control" placeholder="Diagnóstico del paciente" required></textarea>
+                </section>
+
+                <h2 class="sub-title endodoncia" style="width: 16rem; text-align: center;">PlAN DE TRATAMIENTO</h2>
+                <section id="endodoncia" style="margin: 0em 1.2rem; margin-top: 6.5rem;" >
+
+                        <textarea name="tratamiento"  cols="80" id="diagnostico" class="form-control" placeholder="Plan de Tratamiento del paciente" required></textarea>
+                </section>
+                    
+                <h2 class="sub-title endodoncia" style="width: 16rem; text-align: center;">ATENCIÓN AL PACIENTE</h2>
+                    <section id="endodoncia">
+                         <table class="table">
+                    <thead  class="thead-light">
+                        <tr>
+                            <th>FECHA</th>
+                            <th>HORA</th>
+                            <th>ATENCION BRINDADA</th>
+                            <th>VALOR</th>
+                            <th>ABONO</th>
+                            <th>SALDO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <td><input type="date" name="atencion1_1" id="atencion1" ></td>
+                                <td><input type="text" name="atencion1_2"></td>
+                                <td><input type="text" name="atencion1_3"></td>
+                                <td><input type="text" name="atencion1_4"></td>
+                                <td><input type="text" name="atencion1_5"></td>
+                                <td><input type="text" name="atencion1_6"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="date" name="atencion2_1" id="atencion2"></td>
+                                <td><input type="text" name="atencion2_2"></td>
+                                <td><input type="text" name="atencion2_3"></td>
+                                <td><input type="text" name="atencion2_4"></td>
+                                <td><input type="text" name="atencion2_5"></td>
+                                <td><input type="text" name="atencion2_6"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="date" name="atencion3_1" id="atencion3"></td>
+                                <td><input type="text" name="atencion3_2"></td>
+                                <td><input type="text" name="atencion3_3"></td>
+                                <td><input type="text" name="atencion3_4"></td>
+                                <td><input type="text" name="atencion3_5"></td>
+                                <td><input type="text" name="atencion3_6"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="date" name="atencion4_1" id="atencion4"></td>
+                                <td><input type="text" name="atencion4_2"></td>
+                                <td><input type="text" name="atencion4_3"></td>
+                                <td><input type="text" name="atencion4_4"></td>
+                                <td><input type="text" name="atencion4_5"></td>
+                                <td><input type="text" name="atencion4_6"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="date" name="atencion5_1" id="atencion5"></td>
+                                <td><input type="text" name="atencion5_2"></td>
+                                <td><input type="text" name="atencion5_3"></td>
+                                <td><input type="text" name="atencion5_4"></td>
+                                <td><input type="text" name="atencion5_5"></td>
+                                <td><input type="text" name="atencion5_6"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="date" name="atencion6_1" id="atencion6"></td>
+                                <td><input type="text" name="atencion6_2"></td>
+                                <td><input type="text" name="atencion6_3"></td>
+                                <td><input type="text" name="atencion6_4"></td>
+                                <td><input type="text" name="atencion6_5"></td>
+                                <td><input type="text" name="atencion6_6"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="date" name="atencion7_1" id="atencion7"></td>
+                                <td><input type="text" name="atencion7_2"></td>
+                                <td><input type="text" name="atencion7_3"></td>
+                                <td><input type="text" name="atencion7_4"></td>
+                                <td><input type="text" name="atencion7_5"></td>
+                                <td><input type="text" name="atencion7_6"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="date" name="atencion8_1" id="atencion8"></td>
+                                <td><input type="text" name="atencion8_2"></td>
+                                <td><input type="text" name="atencion8_3"></td>
+                                <td><input type="text" name="atencion8_4"></td>
+                                <td><input type="text" name="atencion8_5"></td>
+                                <td><input type="text" name="atencion8_6"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="date" name="atencion9_1" id="atencion9"></td>
+                                <td><input type="text" name="atencion9_2"></td>
+                                <td><input type="text" name="atencion9_3"></td>
+                                <td><input type="text" name="atencion9_4"></td>
+                                <td><input type="text" name="atencion9_5"></td>
+                                <td><input type="text" name="atencion9_6"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="date" name="atencion10_1" id="atencion10"></td>
+                                <td><input type="text" name="atencion10_2"></td>
+                                <td><input type="text" name="atencion10_3"></td>
+                                <td><input type="text" name="atencion10_4"></td>
+                                <td><input type="text" name="atencion10_5"></td>
+                                <td><input type="text" name="atencion10_6"></td>
+                            </tr>
+                    </tbody>
+                    </table>
+                    </section>
+                    
+                    
+   
+              
+            
+                <button type="submit" class="btn btn-primary btn-block boton " onclick="odontograma()" >Guardar</button>
+                    
+            </form>
+            
+    </div>
+</div>
+<script>
+        Date.prototype.toDateInputValue = (function() {
+    var local = new Date(this);
+    local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+    return local.toJSON().slice(0,10);
+});
+      function  fechaActual(){
+       
+        document.getElementById('atencion1').value = new Date().toDateInputValue();
+        document.getElementById('atencion2').value = new Date().toDateInputValue();
+        document.getElementById('atencion3').value = new Date().toDateInputValue();
+        document.getElementById('atencion4').value = new Date().toDateInputValue();
+        document.getElementById('atencion5').value = new Date().toDateInputValue();
+        document.getElementById('atencion6').value = new Date().toDateInputValue();
+        document.getElementById('atencion7').value = new Date().toDateInputValue();
+        document.getElementById('atencion8').value = new Date().toDateInputValue();
+        document.getElementById('atencion9').value = new Date().toDateInputValue();
+        document.getElementById('atencion10').value = new Date().toDateInputValue();
+                console.log(fecha)
+                }
+                fechaActual();
+</script>
+
+<script src="../public/js/odontograma.js"></script>
+
+
+<%- include ('partials/footer') %>

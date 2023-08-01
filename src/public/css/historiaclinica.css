@@ -1,0 +1,82 @@
+
+
+.info_paciente{
+
+}
+.info{
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 1rem 0rem;
+    margin: 0em 1.2rem;
+    margin-top: 5rem;
+}
+
+.sub-title{
+    font-size: 1em;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+    margin-left: 2rem;
+    color: white;
+    background-color:#26196E;
+    font-weight: 400;
+    position: absolute;
+    border: #26196E 1px solid;
+    border-radius: 0.3em;
+    padding: 0.3rem;
+    width: 16rem;
+
+    
+}
+
+#anamnesis_izquierda{
+    width: 47%;
+    display: inline-block;
+    position: relative;
+    margin-left: 2.3em;
+    margin-top: 2rem;
+}
+#anamnesis_derecha{
+    width: 48%;
+    display: inline-block;
+    position: relative;
+    margin-left: 1.3em;
+    margin-top: 2rem;
+}
+
+
+
+.dientes{ 
+    margin-top:1rem;
+ 
+    position: relative;
+    display: inline-block;
+   
+}
+.dientes_cuadranteuno{ 
+    margin-top:5rem;
+    padding-left: 5rem;
+    position: relative;
+    display: inline-block;
+   
+}
+.dientes_cuadrantedos{ 
+    margin-top:5rem;
+    padding-left: 5rem;
+    position: relative;
+    display: inline-block;
+   
+}
+.dientes_cuadrantecuatro{ 
+    
+    padding-left: 5rem;
+    position: relative;
+    display: inline-block;
+   
+}
+.dientes_cuadrantetres{ 
+
+    padding-left: 5rem;
+    position: relative;
+    display: inline-block;
+   
+}

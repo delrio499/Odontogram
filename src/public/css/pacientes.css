@@ -1,0 +1,41 @@
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.rectangulo_navbar{
+    width: 13rem;
+    height: 1rem;
+    top: 0.9rem;
+    background-color:#2A39FF;
+    position: absolute; 
+    transform:rotate(2deg);
+    z-index: -1;
+}
+nav{
+    color: white;
+    background-color: #076ACC;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    font-size: 23px;
+}
+nav a{
+    
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+}
+nav a:hover{
+    color: white;
+    text-decoration: none;
+}
+.info_paciente {
+    color:white;
+    
+}
+.botones a{
+    font-size: 12px;
+}
+.botones{
+    margin-left: 5rem;
+}

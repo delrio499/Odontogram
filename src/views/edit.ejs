@@ -1,0 +1,614 @@
+<%- include('partials/header_edit') %>
+            <!-- FORM-->
+          
+                <div class="cuerpo">
+                    <div class="">
+                        <form action="/edit/<%= task._id %>" method="POST">
+                            <h2 class="sub-title"  style="width: 13rem; text-align: center;margin-top: 0rem;">INFORMACIÓN PERSONAL</h2>
+                            <div class="info">
+            
+                            <div class="input">
+                                <label for="nombres" class="">Nombres:</label>
+                                <input type="text" name="nombres" id="nombres"class="form-control" value="<%= task.nombres %>" required>
+                            </div>
+                            <div class="input">
+                              <label for="apellidos" class="">Apellidos:</label>
+                                <input type="text" name="apellidos" id="apellidos"  class="form-control" value="<%= task.apellidos %>" required>
+                            </div>
+                            <div class="input">
+                                    <label for="documento" class="">Documento de identidad:</label>
+                                      <input type="text" name="documento" id="documento"  class="form-control" value="<%= task.documento %>" required>
+                                  </div>
+                          <div class="input">
+                                <label for="fech_nac" class="">Fecha de Nacimiento</label>
+                                <input type="date" name="fech_nac" id="fech_nac" class="form-control" value="<%= task.fech_nac %>" required>
+                            </div>  
+                            <div class="input">
+                                <label for="ocupacion" class="">Ocupación:</label>
+                                <input type="text" name="ocupacion" id="ocupacion"  class="form-control" value="<%= task.ocupacion %>" required>
+                            </div>
+                            <div class="input">
+                                <label for="direccion" class="">Dirección:</label>
+                                <input type="text" name="direccion" id="direccion" class="form-control" value="<%= task.direccion %>" required>
+                            </div>
+                            <div class="input">
+                                <label for="telefono" class="">Teléfono Fijo:</label>
+                                <input type="text" name="telefono" id="telefono"  class="form-control" value="<%= task.telefono %>" required>
+                            </div>
+                            <div class="input">
+                                <label for="email" class="">Correo electrónico:</label>
+                                <input type="text" name="email" id="email" class="form-control" value="<%= task.email %>" required>
+                            </div>
+                            <div class="input">
+                                <label for="celular" class="">Celular:</label>
+                                <input type="text" name="celular" id="celular" class="form-control" value="<%= task.celular %>" required>
+                            </div>
+                            
+                            <div class="input">
+                                <label for="motivo" class=""> Motivo de la Consulta:</label>
+                                <textarea name="motivo"  cols="80" id="motivo" class="form-control" placeholder="<%= task.motivo %>" required></textarea>
+                            </div>
+                    </div>
+                    <h2 class="sub-title"  style="width: 9rem; text-align: center;margin-top: 3.5rem;">ODONTOGRAMA</h2>
+                            <div class="info">
+                                
+                                <div class="cambiacolor">
+                                    <h5>Selector de color</h5>
+                                    <div id="yellow"  class="colorpicker"></div>
+                                    <input id="amarillo" type="checkbox" value="#ffff40" >
+                      <div id="red"  class="colorpicker"></div>
+                      <input id="rojo" type="checkbox" value="#ff0000" >
+                      <div id="black"  class="colorpicker"></div>
+                      <input id="negro" type="checkbox" value="#0d0d0d" >
+                      <div id="blue"  class="colorpicker"></div>
+                      <input id="azul" type="checkbox" value="#00c3f8" >
+                      <div id="delete"  class="colorpicker"></div>
+                      <input id="borrar" type="checkbox" value="#FFFAFA" >
+                              </div>
+                                <div class="dientes_cuadranteuno">
+                                    <div id="diente18" class="dientes"></div>
+                                    <div id="diente17" class="dientes"></div>
+                                    <div id="diente16" class="dientes"></div>
+                                    <div id="diente15" class="dientes"></div>
+                                    <div id="diente14" class="dientes"></div>
+                                    <div id="diente13" class="dientes"></div>
+                                    <div id="diente12" class="dientes"></div>
+                                    <div id="diente11" class="dientes"></div>
+                                            </div>
+             
+                                             <div class="dientes_cuadrantedos" >
+                                    <div id="diente21" class="dientes"></div>
+                                    <div id="diente22" class="dientes"></div>
+                                    <div id="diente23" class="dientes"></div>
+                                    <div id="diente24" class="dientes"></div>
+                                    <div id="diente25" class="dientes"></div>
+                                    <div id="diente26" class="dientes"></div>
+                                    <div id="diente27" class="dientes"></div>
+                                    <div id="diente28" class="dientes"></div>
+                                             </div>
+                                             <div class="dientes_cuadrantecuatro">
+                                    <div id="diente48" class="dientes"></div>
+                                    <div id="diente47" class="dientes"></div>
+                                    <div id="diente46" class="dientes"></div>
+                                    <div id="diente45" class="dientes"></div>
+                                    <div id="diente44" class="dientes"></div>
+                                    <div id="diente43" class="dientes"></div>
+                                    <div id="diente42" class="dientes"></div>
+                                    <div id="diente41" class="dientes"></div>
+                                               </div>
+                                               <div class="dientes_cuadrantetres">
+                                    <div id="diente31" class="dientes"></div>
+                                    <div id="diente32" class="dientes"></div>
+                                    <div id="diente33" class="dientes"></div>
+                                    <div id="diente34" class="dientes"></div>
+                                    <div id="diente35" class="dientes"></div>
+                                    <div id="diente36" class="dientes"></div>
+                                    <div id="diente37" class="dientes"></div>
+                                    <div id="diente38" class="dientes"></div>
+                                                 </div>
+                            </div>
+                            <input type="hidden" name="superior_arriba18" id="superior_arriba18" value="<%=task.superior_arriba18%>" >
+                            <input type="hidden" name="superior_arriba17" id="superior_arriba17" value="<%=task.superior_arriba17%>" >
+                            <input type="hidden" name="superior_arriba16" id="superior_arriba16" value="<%=task.superior_arriba16%>" >
+                            <input type="hidden" name="superior_arriba15" id="superior_arriba15" value="<%=task.superior_arriba15%>" >
+                            <input type="hidden" name="superior_arriba14" id="superior_arriba14" value="<%=task.superior_arriba14%>" >
+                            <input type="hidden" name="superior_arriba13" id="superior_arriba13" value="<%=task.superior_arriba13%>" >
+                            <input type="hidden" name="superior_arriba12" id="superior_arriba12" value="<%=task.superior_arriba12%>" >
+                            <input type="hidden" name="superior_arriba11" id="superior_arriba11" value="<%=task.superior_arriba11%>" >
+                            <input type="hidden" name="superior_arriba21" id="superior_arriba21" value="<%=task.superior_arriba21%>" >
+                            <input type="hidden" name="superior_arriba22" id="superior_arriba22"value="<%=task.superior_arriba22%>" >
+                            <input type="hidden" name="superior_arriba23" id="superior_arriba23"value="<%=task.superior_arriba23%>" >
+                            <input type="hidden" name="superior_arriba24" id="superior_arriba24"value="<%=task.superior_arriba24%>" >
+                            <input type="hidden" name="superior_arriba25" id="superior_arriba25"value="<%=task.superior_arriba25%>" >
+                            <input type="hidden" name="superior_arriba26" id="superior_arriba26"value="<%=task.superior_arriba26%>" >
+                            <input type="hidden" name="superior_arriba27" id="superior_arriba27"value="<%=task.superior_arriba27%>" >
+                            <input type="hidden" name="superior_arriba28" id="superior_arriba28"value="<%=task.superior_arriba28%>" >
+                            <input type="hidden" name="superior_arriba48" id="superior_arriba48"value="<%=task.superior_arriba48%>" >
+                            <input type="hidden" name="superior_arriba47" id="superior_arriba47"value="<%=task.superior_arriba47%>" >
+                            <input type="hidden" name="superior_arriba46" id="superior_arriba46"value="<%=task.superior_arriba46%>" >
+                            <input type="hidden" name="superior_arriba45" id="superior_arriba45"value="<%=task.superior_arriba45%>" >
+                            <input type="hidden" name="superior_arriba44"id="superior_arriba44" value="<%=task.superior_arriba44%>" >
+                            <input type="hidden" name="superior_arriba43" id="superior_arriba43"value="<%=task.superior_arriba43%>" >
+                            <input type="hidden" name="superior_arriba42"id="superior_arriba42" value="<%=task.superior_arriba42%>" >
+                            <input type="hidden" name="superior_arriba41" id="superior_arriba41"value="<%=task.superior_arriba41%>" >
+                            <input type="hidden" name="superior_arriba31" id="superior_arriba31"value="<%=task.superior_arriba31%>" >
+                            <input type="hidden" name="superior_arriba32" id="superior_arriba32"value="<%=task.superior_arriba32%>" >
+                            <input type="hidden" name="superior_arriba33" id="superior_arriba33"value="<%=task.superior_arriba33%>" >
+                            <input type="hidden" name="superior_arriba34" id="superior_arriba34"value="<%=task.superior_arriba34%>" >
+                            <input type="hidden" name="superior_arriba35" id="superior_arriba35"value="<%=task.superior_arriba35%>" >
+                            <input type="hidden" name="superior_arriba36" id="superior_arriba36"value="<%=task.superior_arriba36%>" >
+                            <input type="hidden" name="superior_arriba37" id="superior_arriba37"value="<%=task.superior_arriba37%>" >
+                            <input type="hidden" name="superior_arriba38" id="superior_arriba38"value="<%=task.superior_arriba38%>" >
+                            <input type="hidden" name="inferior_arriba18" id="inferior_arriba18"value="<%=task.inferior_arriba18%>" >
+                            <input type="hidden" name="inferior_arriba17" id="inferior_arriba17"value="<%=task.inferior_arriba17%>" >
+                            <input type="hidden" name="inferior_arriba16" id="inferior_arriba16"value="<%=task.inferior_arriba16%>" >
+                            <input type="hidden" name="inferior_arriba15" id="inferior_arriba15"value="<%=task.inferior_arriba15%>" >
+                            <input type="hidden" name="inferior_arriba14" id="inferior_arriba14"value="<%=task.inferior_arriba14%>" >
+                            <input type="hidden" name="inferior_arriba13" id="inferior_arriba13"value="<%=task.inferior_arriba13%>" >
+                            <input type="hidden" name="inferior_arriba12" id="inferior_arriba12"value="<%=task.inferior_arriba12%>" >
+                            <input type="hidden" name="inferior_arriba11" id="inferior_arriba11"value="<%=task.inferior_arriba11%>" >
+                            <input type="hidden" name="inferior_arriba21" id="inferior_arriba21"value="<%=task.inferior_arriba21%>" >
+                            <input type="hidden" name="inferior_arriba22" id="inferior_arriba22"value="<%=task.inferior_arriba22%>" >
+                            <input type="hidden" name="inferior_arriba23" id="inferior_arriba23"value="<%=task.inferior_arriba23%>" >
+                            <input type="hidden" name="inferior_arriba24" id="inferior_arriba24"value="<%=task.inferior_arriba24%>" >
+                            <input type="hidden" name="inferior_arriba25" id="inferior_arriba25"value="<%=task.inferior_arriba25%>" >
+                            <input type="hidden" name="inferior_arriba26" id="inferior_arriba26"value="<%=task.inferior_arriba26%>" >
+                            <input type="hidden" name="inferior_arriba27" id="inferior_arriba27"value="<%=task.inferior_arriba27%>" >
+                            <input type="hidden" name="inferior_arriba28" id="inferior_arriba28"value="<%=task.inferior_arriba28%>" >
+                            <input type="hidden" name="inferior_arriba47" id="inferior_arriba48"value="<%=task.inferior_arriba48%>" >
+                            <input type="hidden" name="inferior_arriba48" id="inferior_arriba47"value="<%=task.inferior_arriba47%>" >
+                            <input type="hidden" name="inferior_arriba46" id="inferior_arriba46"value="<%=task.inferior_arriba46%>" >
+                            <input type="hidden" name="inferior_arriba45" id="inferior_arriba45"value="<%=task.inferior_arriba45%>" >
+                            <input type="hidden" name="inferior_arriba44" id="inferior_arriba44"value="<%=task.inferior_arriba44%>" >
+                            <input type="hidden" name="inferior_arriba43" id="inferior_arriba43"value="<%=task.inferior_arriba43%>" >
+                            <input type="hidden" name="inferior_arriba42" id="inferior_arriba42"value="<%=task.inferior_arriba42%>" >
+                            <input type="hidden" name="inferior_arriba41" id="inferior_arriba41"value="<%=task.inferior_arriba41%>" >
+                            <input type="hidden" name="inferior_arriba31" id="inferior_arriba31"value="<%=task.inferior_arriba31%>" >
+                            <input type="hidden" name="inferior_arriba32" id="inferior_arriba32"value="<%=task.inferior_arriba32%>" >
+                            <input type="hidden" name="inferior_arriba33" id="inferior_arriba33"value="<%=task.inferior_arriba33%>" >
+                            <input type="hidden" name="inferior_arriba34" id="inferior_arriba34"value="<%=task.inferior_arriba34%>" >
+                            <input type="hidden" name="inferior_arriba35" id="inferior_arriba35"value="<%=task.inferior_arriba35%>" >
+                            <input type="hidden" name="inferior_arriba36" id="inferior_arriba36"value="<%=task.inferior_arriba36%>" >
+                            <input type="hidden" name="inferior_arriba37" id="inferior_arriba37"value="<%=task.inferior_arriba37%>" >
+                            <input type="hidden" name="inferior_arriba38" id="inferior_arriba38"value="<%=task.inferior_arriba38%>" >
+                            <input type="hidden" name="izquierda18" id="izquierda18"value="<%=task.izquierda18%>" >
+                            <input type="hidden" name="izquierda17" id="izquierda17"value="<%=task.izquierda17%>" >
+                            <input type="hidden" name="izquierda16" id="izquierda16"value="<%=task.izquierda16%>" >
+                            <input type="hidden" name="izquierda15" id="izquierda15"value="<%=task.izquierda15%>" >
+                            <input type="hidden" name="izquierda14" id="izquierda14"value="<%=task.izquierda14%>" >
+                            <input type="hidden" name="izquierda13" id="izquierda13"value="<%=task.izquierda13%>" >
+                            <input type="hidden" name="izquierda12" id="izquierda12"value="<%=task.izquierda12%>" >
+                            <input type="hidden" name="izquierda11" id="izquierda11"value="<%=task.izquierda11%>" >
+                            <input type="hidden" name="izquierda21" id="izquierda21"value="<%=task.izquierda21%>" >
+                            <input type="hidden" name="izquierda22" id="izquierda22"value="<%=task.izquierda22%>" >
+                            <input type="hidden" name="izquierda23" id="izquierda23"value="<%=task.izquierda23%>" >
+                            <input type="hidden" name="izquierda24" id="izquierda24"value="<%=task.izquierda24%>" >
+                            <input type="hidden" name="izquierda25" id="izquierda25"value="<%=task.izquierda25%>" >
+                            <input type="hidden" name="izquierda26" id="izquierda26"value="<%=task.izquierda26%>" >
+                            <input type="hidden" name="izquierda27" id="izquierda27"value="<%=task.izquierda27%>" >
+                            <input type="hidden" name="izquierda28" id="izquierda28"value="<%=task.izquierda28%>" >
+                            <input type="hidden" name="izquierda48" id="izquierda48"value="<%=task.izquierda48%>" >
+                            <input type="hidden" name="izquierda47" id="izquierda47"value="<%=task.izquierda47%>" >
+                            <input type="hidden" name="izquierda46" id="izquierda46"value="<%=task.izquierda46%>" >
+                            <input type="hidden" name="izquierda45" id="izquierda45"value="<%=task.izquierda45%>" >
+                            <input type="hidden" name="izquierda44" id="izquierda44"value="<%=task.izquierda44%>" >
+                            <input type="hidden" name="izquierda43" id="izquierda43"value="<%=task.izquierda43%>" >
+                            <input type="hidden" name="izquierda42" id="izquierda42"value="<%=task.izquierda42%>" >
+                            <input type="hidden" name="izquierda41" id="izquierda41"value="<%=task.izquierda41%>" >
+                            <input type="hidden" name="izquierda31" id="izquierda31"value="<%=task.izquierda31%>" >
+                            <input type="hidden" name="izquierda32" id="izquierda32"value="<%=task.izquierda32%>" >
+                            <input type="hidden" name="izquierda33" id="izquierda33"value="<%=task.izquierda33%>" >
+                            <input type="hidden" name="izquierda34" id="izquierda34"value="<%=task.izquierda34%>" >
+                            <input type="hidden" name="izquierda35" id="izquierda35"value="<%=task.izquierda35%>" >
+                            <input type="hidden" name="izquierda36" id="izquierda36"value="<%=task.izquierda36%>" >
+                            <input type="hidden" name="izquierda37" id="izquierda37"value="<%=task.izquierda37%>" >
+                            <input type="hidden" name="izquierda38" id="izquierda38"value="<%=task.izquierda38%>" >
+                            <input type="hidden" name="centro18" id="centro18"value="<%=task.centro18%>" >
+                            <input type="hidden" name="centro17" id="centro17"value="<%=task.centro17%>" >
+                            <input type="hidden" name="centro16" id="centro16"value="<%=task.centro16%>" >
+                            <input type="hidden" name="centro15" id="centro15"value="<%=task.centro15%>" >
+                            <input type="hidden" name="centro14" id="centro14"value="<%=task.centro14%>" >
+                            <input type="hidden" name="centro13" id="centro13"value="<%=task.centro13%>" >
+                            <input type="hidden" name="centro12" id="centro12"value="<%=task.centro12%>" >
+                            <input type="hidden" name="centro11" id="centro11"value="<%=task.centro11%>" >
+                            <input type="hidden" name="centro21" id="centro21"value="<%=task.centro21%>" >
+                            <input type="hidden" name="centro22" id="centro22"value="<%=task.centro22%>" >
+                            <input type="hidden" name="centro23" id="centro23"value="<%=task.centro23%>" >
+                            <input type="hidden" name="centro24" id="centro24"value="<%=task.centro24%>" >
+                            <input type="hidden" name="centro25" id="centro25"value="<%=task.centro25%>" >
+                            <input type="hidden" name="centro26" id="centro26"value="<%=task.centro26%>" >
+                            <input type="hidden" name="centro27" id="centro27"value="<%=task.centro27%>" >
+                            <input type="hidden" name="centro28" id="centro28"value="<%=task.centro28%>" >
+                            <input type="hidden" name="centro48" id="centro48"value="<%=task.centro48%>" >
+                            <input type="hidden" name="centro47" id="centro47"value="<%=task.centro47%>" >
+                            <input type="hidden" name="centro46" id="centro46"value="<%=task.centro46%>" >
+                            <input type="hidden" name="centro45" id="centro45"value="<%=task.centro45%>" >
+                            <input type="hidden" name="centro44" id="centro44"value="<%=task.centro44%>" >
+                            <input type="hidden" name="centro43" id="centro43"value="<%=task.centro43%>" >
+                            <input type="hidden" name="centro42" id="centro42"value="<%=task.centro42%>" >
+                            <input type="hidden" name="centro41" id="centro41"value="<%=task.centro41%>" >
+                            <input type="hidden" name="centro31" id="centro31"value="<%=task.centro31%>" >
+                            <input type="hidden" name="centro32" id="centro32"value="<%=task.centro32%>" >
+                            <input type="hidden" name="centro33" id="centro33"value="<%=task.centro33%>" >
+                            <input type="hidden" name="centro34" id="centro34"value="<%=task.centro34%>" >
+                            <input type="hidden" name="centro35" id="centro35"value="<%=task.centro35%>" >
+                            <input type="hidden" name="centro36" id="centro36"value="<%=task.centro36%>" >
+                            <input type="hidden" name="centro37" id="centro37"value="<%=task.centro37%>" >
+                            <input type="hidden" name="centro38" id="centro38"value="<%=task.centro38%>" >
+                            <input type="hidden" name="superior_abajo18" id="superior_abajo18" value="<%=task.superior_abajo18%>" >
+                            <input type="hidden" name="superior_abajo17" id="superior_abajo17"value="<%=task.superior_abajo17%>" >
+                            <input type="hidden" name="superior_abajo16" id="superior_abajo16"value="<%=task.superior_abajo16%>" >
+                            <input type="hidden" name="superior_abajo15" id="superior_abajo15"value="<%=task.superior_abajo15%>" >
+                            <input type="hidden" name="superior_abajo14" id="superior_abajo14"value="<%=task.superior_abajo14%>" >
+                            <input type="hidden" name="superior_abajo13" id="superior_abajo13"value="<%=task.superior_abajo13%>" >
+                            <input type="hidden" name="superior_abajo12" id="superior_abajo12"value="<%=task.superior_abajo12%>" >
+                            <input type="hidden" name="superior_abajo11" id="superior_abajo11"value="<%=task.superior_abajo11%>" >
+                            <input type="hidden" name="superior_abajo21" id="superior_abajo21"value="<%=task.superior_abajo21%>" >
+                            <input type="hidden" name="superior_abajo22" id="superior_abajo22"value="<%=task.superior_abajo22%>" >
+                            <input type="hidden" name="superior_abajo23" id="superior_abajo23"value="<%=task.superior_abajo23%>" >
+                            <input type="hidden" name="superior_abajo24" id="superior_abajo24"value="<%=task.superior_abajo24%>" >
+                            <input type="hidden" name="superior_abajo25" id="superior_abajo25"value="<%=task.superior_abajo25%>" >
+                            <input type="hidden" name="superior_abajo26" id="superior_abajo26"value="<%=task.superior_abajo26%>" >
+                            <input type="hidden" name="superior_abajo27" id="superior_abajo27"value="<%=task.superior_abajo27%>" >
+                            <input type="hidden" name="superior_abajo28" id="superior_abajo28"value="<%=task.superior_abajo28%>" >
+                            <input type="hidden" name="superior_abajo48" id="superior_abajo48"value="<%=task.superior_abajo48%>" >
+                            <input type="hidden" name="superior_abajo47" id="superior_abajo47"value="<%=task.superior_abajo47%>" >
+                            <input type="hidden" name="superior_abajo46" id="superior_abajo46"value="<%=task.superior_abajo46%>" >
+                            <input type="hidden" name="superior_abajo45" id="superior_abajo45"value="<%=task.superior_abajo45%>" >
+                            <input type="hidden" name="superior_abajo44" id="superior_abajo44"value="<%=task.superior_abajo48%>" >
+                            <input type="hidden" name="superior_abajo43" id="superior_abajo43"value="<%=task.superior_abajo43%>" >
+                            <input type="hidden" name="superior_abajo42" id="superior_abajo42"value="<%=task.superior_abajo42%>" >
+                            <input type="hidden" name="superior_abajo41" id="superior_abajo41"value="<%=task.superior_abajo41%>" >
+                            <input type="hidden" name="superior_abajo31" id="superior_abajo31"value="<%=task.superior_abajo31%>" >
+                            <input type="hidden" name="superior_abajo32" id="superior_abajo32"value="<%=task.superior_abajo32%>" >
+                            <input type="hidden" name="superior_abajo33" id="superior_abajo33"value="<%=task.superior_abajo33%>" >
+                            <input type="hidden" name="superior_abajo34" id="superior_abajo34"value="<%=task.superior_abajo34%>" >
+                            <input type="hidden" name="superior_abajo35" id="superior_abajo35"value="<%=task.superior_abajo35%>" >
+                            <input type="hidden" name="superior_abajo36" id="superior_abajo36"value="<%=task.superior_abajo36%>" >
+                            <input type="hidden" name="superior_abajo37" id="superior_abajo37"value="<%=task.superior_abajo37%>" >
+                            <input type="hidden" name="superior_abajo38" id="superior_abajo38"value="<%=task.superior_abajo38%>" >
+                            <input type="hidden" name="inferior_abajo18" id="inferior_abajo18"value="<%=task.inferior_abajo18%>" >
+                            <input type="hidden" name="inferior_abajo17" id="inferior_abajo17"value="<%=task.inferior_abajo17%>" >
+                            <input type="hidden" name="inferior_abajo16" id="inferior_abajo16"value="<%=task.inferior_abajo16%>" >
+                            <input type="hidden" name="inferior_abajo15" id="inferior_abajo15"value="<%=task.inferior_abajo15%>" >
+                            <input type="hidden" name="inferior_abajo14" id="inferior_abajo14"value="<%=task.inferior_abajo14%>" >
+                            <input type="hidden" name="inferior_abajo13" id="inferior_abajo13"value="<%=task.inferior_abajo13%>" >
+                            <input type="hidden" name="inferior_abajo12" id="inferior_abajo12"value="<%=task.inferior_abajo12%>" >
+                            <input type="hidden" name="inferior_abajo11" id="inferior_abajo11"value="<%=task.inferior_abajo11%>" >
+                            <input type="hidden" name="inferior_abajo21" id="inferior_abajo21"value="<%=task.inferior_abajo21%>" >
+                            <input type="hidden" name="inferior_abajo22" id="inferior_abajo22"value="<%=task.inferior_abajo22%>" >
+                            <input type="hidden" name="inferior_abajo23" id="inferior_abajo23"value="<%=task.inferior_abajo23%>" >
+                            <input type="hidden" name="inferior_abajo24" id="inferior_abajo24"value="<%=task.inferior_abajo24%>" >
+                            <input type="hidden" name="inferior_abajo25" id="inferior_abajo25"value="<%=task.inferior_abajo25%>" >
+                            <input type="hidden" name="inferior_abajo26" id="inferior_abajo26"value="<%=task.inferior_abajo26%>" >
+                            <input type="hidden" name="inferior_abajo27" id="inferior_abajo27"value="<%=task.inferior_abajo27%>" >
+                            <input type="hidden" name="inferior_abajo28" id="inferior_abajo28"value="<%=task.inferior_abajo28%>" >
+                            <input type="hidden" name="inferior_abajo48" id="inferior_abajo48"value="<%=task.inferior_abajo48%>" >
+                            <input type="hidden" name="inferior_abajo47" id="inferior_abajo47"value="<%=task.inferior_abajo47%>" >
+                            <input type="hidden" name="inferior_abajo46" id="inferior_abajo46"value="<%=task.inferior_abajo46%>" >
+                            <input type="hidden" name="inferior_abajo45" id="inferior_abajo45"value="<%=task.inferior_abajo45%>" >
+                            <input type="hidden" name="inferior_abajo44" id="inferior_abajo44"value="<%=task.inferior_abajo44%>" >
+                            <input type="hidden" name="inferior_abajo43" id="inferior_abajo43"value="<%=task.inferior_abajo43%>" >
+                            <input type="hidden" name="inferior_abajo42" id="inferior_abajo42"value="<%=task.inferior_abajo42%>" >
+                            <input type="hidden" name="inferior_abajo41" id="inferior_abajo41"value="<%=task.inferior_abajo41%>" >
+                            <input type="hidden" name="inferior_abajo31" id="inferior_abajo31"value="<%=task.inferior_abajo31%>" >
+                            <input type="hidden" name="inferior_abajo32" id="inferior_abajo32"value="<%=task.inferior_abajo32%>" >
+                            <input type="hidden" name="inferior_abajo33" id="inferior_abajo33"value="<%=task.inferior_abajo33%>" >
+                            <input type="hidden" name="inferior_abajo34" id="inferior_abajo34"value="<%=task.inferior_abajo34%>" >
+                            <input type="hidden" name="inferior_abajo35" id="inferior_abajo35"value="<%=task.inferior_abajo35%>" >
+                            <input type="hidden" name="inferior_abajo36" id="inferior_abajo36"value="<%=task.inferior_abajo36%>" >
+                            <input type="hidden" name="inferior_abajo37" id="inferior_abajo37"value="<%=task.inferior_abajo37%>" >
+                            <input type="hidden" name="inferior_abajo38" id="inferior_abajo38"value="<%=task.inferior_abajo38%>" >
+                            <input type="hidden" name="derecha18" id="derecha18" value="<%=task.derecha18%>" >
+                            <input type="hidden" name="derecha17" id="derecha17"value="<%=task.derecha17%>" >
+                            <input type="hidden" name="derecha16" id="derecha16"value="<%=task.derecha16%>" >
+                            <input type="hidden" name="derecha15" id="derecha15"value="<%=task.derecha15%>" >
+                            <input type="hidden" name="derecha14" id="derecha14"value="<%=task.derecha14%>" >
+                            <input type="hidden" name="derecha13" id="derecha13"value="<%=task.derecha13%>" >
+                            <input type="hidden" name="derecha12" id="derecha12"value="<%=task.derecha12%>" >
+                            <input type="hidden" name="derecha11" id="derecha11"value="<%=task.derecha11%>" >
+                            <input type="hidden" name="derecha21" id="derecha21"value="<%=task.derecha21%>" >
+                            <input type="hidden" name="derecha22" id="derecha22"value="<%=task.derecha22%>" >
+                            <input type="hidden" name="derecha23" id="derecha23"value="<%=task.derecha23%>" >
+                            <input type="hidden" name="derecha24" id="derecha24"value="<%=task.derecha24%>" >
+                            <input type="hidden" name="derecha25" id="derecha25"value="<%=task.derecha25%>" >
+                            <input type="hidden" name="derecha26" id="derecha26"value="<%=task.derecha26%>" >
+                            <input type="hidden" name="derecha27" id="derecha27"value="<%=task.derecha27%>" >
+                            <input type="hidden" name="derecha28" id="derecha28"value="<%=task.derecha28%>" >
+                            <input type="hidden" name="derecha48" id="derecha48"value="<%=task.derecha48%>" >
+                            <input type="hidden" name="derecha47" id="derecha47"value="<%=task.derecha47%>" >
+                            <input type="hidden" name="derecha46" id="derecha46"value="<%=task.derecha46%>" >
+                            <input type="hidden" name="derecha45" id="derecha45"value="<%=task.derecha45%>" >
+                            <input type="hidden" name="derecha44" id="derecha44"value="<%=task.derecha44%>" >
+                            <input type="hidden" name="derecha43" id="derecha43"value="<%=task.derecha43%>" >
+                            <input type="hidden" name="derecha42" id="derecha42"value="<%=task.derecha42%>" >
+                            <input type="hidden" name="derecha41" id="derecha41"value="<%=task.derecha41%>" >
+                            <input type="hidden" name="derecha31" id="derecha31"value="<%=task.derecha31%>" >
+                            <input type="hidden" name="derecha32" id="derecha32"value="<%=task.derecha32%>" >
+                            <input type="hidden" name="derecha33" id="derecha33"value="<%=task.derecha33%>" >
+                            <input type="hidden" name="derecha34" id="derecha34"value="<%=task.derecha34%>" >
+                            <input type="hidden" name="derecha35" id="derecha35"value="<%=task.derecha35%>" >
+                            <input type="hidden" name="derecha36" id="derecha36"value="<%=task.derecha36%>" >
+                            <input type="hidden" name="derecha37" id="derecha37"value="<%=task.derecha37%>" >
+                            <input type="hidden" name="derecha38" id="derecha38"value="<%=task.derecha38%>" >
+
+
+                            <h2 class="sub-title" style="width: 10rem; text-align: center;">ENDODONCIA</h2>
+                            <section class="info" style="margin: 0em 1rem; margin-top: 3.2rem;">
+                                <table class="table">
+                                    <thead  class="thead-light">
+                                        <tr>
+                                            <th># DE DIENTE</th>
+                                            <th>m.m</th>
+                                            <th>LIMA</th>
+                                            <th>C.R</th>
+                                            <th>CONDUCTO</th>
+                                            <th># DE RADIOGRAFIA</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td><input value='<%= task.endodoncia1_1 %>'></td>
+                                                <td><input value='<%= task.endodoncia1_2 %>'></td>
+                                                <td><input value='<%= task.endodoncia1_3 %>'></td>
+                                                <td><input value='<%= task.endodoncia1_4 %>'></td>
+                                                <td><input value='<%= task.endodoncia1_5 %>'></td>
+                                                <td><input value='<%= task.endodoncia1_6 %>'></td>
+            
+                                        </tr>
+                                        <tr>
+                                                <td><input value='<%= task.endodoncia2_1 %>'></td>
+                                                <td><input value='<%= task.endodoncia2_2 %>'></td>
+                                                <td><input value='<%= task.endodoncia2_3 %>'></td>
+                                                <td><input value='<%= task.endodoncia2_4 %>'></td>
+                                                <td><input value='<%= task.endodoncia2_5 %>'></td>
+                                                <td><input value='<%= task.endodoncia2_6 %>'></td>
+            
+                                    </tr>
+                                    <tr>
+                                        <td><input value='<%= task.endodoncia3_1 %>'></td>
+                                        <td><input value='<%= task.endodoncia3_2 %>'></td>
+                                        <td><input value='<%= task.endodoncia3_3 %>'></td>
+                                        <td><input value='<%= task.endodoncia3_4 %>'></td>
+                                        <td><input value='<%= task.endodoncia3_5 %>'></td>
+                                        <td><input value='<%= task.endodoncia3_6 %>'></td>
+            
+                                </tr>
+                                <tr>
+                                    <td><input value='<%= task.endodoncia4_1 %>'></td>
+                                    <td><input value='<%= task.endodoncia4_2 %>'></td>
+                                    <td><input value='<%= task.endodoncia4_3 %>'></td>
+                                    <td><input value='<%= task.endodoncia4_4 %>'></td>
+                                    <td><input value='<%= task.endodoncia4_5 %>'></td>
+                                    <td><input value='<%= task.endodoncia4_6 %>'></td>
+            
+                            </tr>
+                                 <tr>
+                                    <td><input value='<%= task.endodoncia5_1 %>'></td>
+                                    <td><input value='<%= task.endodoncia5_2 %>'></td>
+                                    <td><input value='<%= task.endodoncia5_3 %>'></td>
+                                    <td><input value='<%= task.endodoncia5_4 %>'></td>
+                                    <td><input value='<%= task.endodoncia5_5 %>'></td>
+                                    <td><input value='<%= task.endodoncia5_6 %>'></td>
+            
+                                 </tr>
+            
+                                    </tbody>
+                                </table>
+                            </section>
+
+                            <h2 class="sub-title" style="width: 10rem; text-align: center;">DIAGNÓSTICO</h2>
+                <section class="info" style="margin: 0em 1rem; margin-top: 3.2rem;" >
+                     <table class="table">
+                        <thead class="thead-light">
+                            <tr><th>Diagnostico</th></tr>
+                        </thead>
+                        <tbody>
+                            <td><textarea name="diagnostico" value='<%= task.diagnostico %>'></textarea></td>
+                        </tbody>
+                    </table >
+                </section>
+
+                <h2 class="sub-title" style="width: 15rem; text-align: center;">PLAN DE TRATAMIENTO</h2>
+                <section class="info" style="margin: 0em 1rem; margin-top: 3.2rem;" >
+                     <table class="table">
+                        <thead class="thead-light">
+                            <tr><th>Plan de Tratamiento</th></tr>
+                        </thead>
+                        <tbody>
+                            <td><textarea name="tratamiento" value='<%= task.tratamiento %>'></textarea></td>
+                        </tbody>
+                    </table >
+                </section>
+
+                <h2 class="sub-title" style="width: 14rem; text-align: center;">ATENCIÓN AL PACIENTE</h2>
+                <section class="info" style="margin: 0em 1rem; margin-top: 3.2rem;">
+                     <table class="table">
+                <thead  class="thead-light">
+                    <tr>
+                        <th>FECHA</th>
+                        <th>HORA</th>
+                        <th>ATENCION BRINDADA</th>
+                        <th>VALOR</th>
+                        <th>ABONO</th>
+                        <th>SALDO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>  <%  atencion1=task.atencion1_1;%>
+                            <% dia1 = atencion1.getDate()+1;%>
+                            <% mes1 = atencion1.getMonth() +1;%>
+                            <% ano1 = atencion1.getFullYear();%>
+                             
+                             
+                            <p><%= dia1%>/<%= mes1%>/<%= ano1%></p>
+                         </td>
+                       <td><p><%=  task.atencion1_2  %></p></td>
+                       <td><p><%=  task.atencion1_3  %></p></td>
+                       <td><p><%=  task.atencion1_4  %></p></td>
+                       <td><p><%=  task.atencion1_5  %></p></td>
+                       <td><p><%=  task.atencion1_6  %></p></td>
+   
+                        </tr>
+                        <tr>
+                            <td>  <% atencion2=task.atencion2_1;%>
+                                <% dia2 = atencion2.getDate()+1;%>
+                                <% mes2 = atencion2.getMonth()+1;%>
+                                <% ano2 = atencion2.getFullYear();%>
+                                 
+                                 
+                                <p><%= dia2%>/<%= mes2%>/<%= ano2%></p>
+                             </td>
+                           <td><p><%=  task.atencion2_2  %></p></td>
+                           <td><p><%=  task.atencion2_3  %></p></td>
+                           <td><p><%=  task.atencion2_4  %></p></td>
+                           <td><p><%=  task.atencion2_5  %></p></td>
+                           <td><p><%=  task.atencion2_6  %></p></td>
+       
+                            </tr>
+                            <tr>
+                                <td> <% atencion3 =task.atencion3_1;%>
+                                    <% dia3 = atencion3.getDate()+1;%>
+                                    <% mes3 = atencion3.getMonth()+1;%>
+                                    <% ano3 = atencion3.getFullYear();%>
+                                     
+                                     
+                                    <p><%= dia3%>/<%= mes3%>/<%= ano3%></p></td>
+                               <td><p><%=  task.atencion3_2  %></p></td>
+                               <td><p><%=  task.atencion3_3  %></p></td>
+                               <td><p><%=  task.atencion3_4  %></p></td>
+                               <td><p><%=  task.atencion3_5  %></p></td>
+                               <td><p><%=  task.atencion3_6  %></p></td>
+        
+                                </tr>
+                                <tr>
+                                   
+                        <td>  <%  atencion4=task.atencion4_1;%>
+                            <% dia4 = atencion4.getDate()+1;%>
+                            <% mes4 = atencion4.getMonth() +1;%>
+                            <% ano4 = atencion4.getFullYear();%>
+                             
+                             
+                            <p><%= dia4%>/<%= mes4%>/<%= ano4%></p>
+                         </td>
+                                   <td><p><%=  task.atencion4_2  %></p></td>
+                                   <td><p><%=  task.atencion4_3  %></p></td>
+                                   <td><p><%=  task.atencion4_4  %></p></td>
+                                   <td><p><%=  task.atencion4_5  %></p></td>
+                                   <td><p><%=  task.atencion4_6  %></p></td>
+               
+                                    </tr>
+                                    <tr>
+                                       
+                        <td>  <%  atencion5=task.atencion5_1;%>
+                            <% dia5 = atencion5.getDate()+1;%>
+                            <% mes5 = atencion5.getMonth() +1;%>
+                            <% ano5 = atencion5.getFullYear();%>
+                             
+                             
+                            <p><%= dia5%>/<%= mes5%>/<%= ano5%></p>
+                         </td>
+                                       <td><p><%=  task.atencion5_2  %></p></td>
+                                       <td><p><%=  task.atencion5_3  %></p></td>
+                                       <td><p><%=  task.atencion5_4  %></p></td>
+                                       <td><p><%=  task.atencion5_5  %></p></td>
+                                       <td><p><%=  task.atencion5_6  %></p></td>
+                   
+                                        </tr>
+                                        <tr>
+                                           
+                        <td>  <%  atencion6=task.atencion6_1;%>
+                            <% dia6 = atencion6.getDate()+1;%>
+                            <% mes6 = atencion6.getMonth() +1;%>
+                            <% ano6 = atencion6.getFullYear();%>
+                             
+                             
+                            <p><%= dia6%>/<%= mes6%>/<%= ano6%></p>
+                         </td>
+                                           <td><p><%=  task.atencion6_2  %></p></td>
+                                           <td><p><%=  task.atencion6_3  %></p></td>
+                                           <td><p><%=  task.atencion6_4  %></p></td>
+                                           <td><p><%=  task.atencion6_5  %></p></td>
+                                           <td><p><%=  task.atencion6_6  %></p></td>
+                       
+                                            </tr>
+                                            <tr>
+                                          
+                        <td>  <%  atencion7=task.atencion1_1;%>
+                            <% dia7 = atencion7.getDate()+1;%>
+                            <% mes7 = atencion7.getMonth() +1;%>
+                            <% ano7 = atencion7.getFullYear();%>
+                             
+                             
+                            <p><%= dia7%>/<%= mes7%>/<%= ano7%></p>
+                         </td>
+                                               <td><p><%=  task.atencion7_2  %></p></td>
+                                               <td><p><%=  task.atencion7_3  %></p></td>
+                                               <td><p><%=  task.atencion7_4  %></p></td>
+                                               <td><p><%=  task.atencion7_5  %></p></td>
+                                               <td><p><%=  task.atencion7_6  %></p></td>
+                           
+                                                </tr>
+                                                <tr>
+                                                    
+                        <td>  <%  atencion8=task.atencion1_1;%>
+                            <% dia8 = atencion8.getDate()+1;%>
+                            <% mes8 = atencion8.getMonth() +1;%>
+                            <% ano8 = atencion8.getFullYear();%>
+                             
+                             
+                            <p><%= dia8%>/<%= mes8%>/<%= ano8%></p>
+                         </td>
+                                                   <td><p><%=  task.atencion8_2  %></p></td>
+                                                   <td><p><%=  task.atencion8_3  %></p></td>
+                                                   <td><p><%=  task.atencion8_4  %></p></td>
+                                                   <td><p><%=  task.atencion8_5  %></p></td>
+                                                   <td><p><%=  task.atencion8_6  %></p></td>
+                               
+                                                    </tr>
+                                                    <tr>
+                                                       
+                        <td>  <%  atencion9=task.atencion9_1;%>
+                            <% dia9 = atencion9.getDate()+1;%>
+                            <% mes9 = atencion9.getMonth() +1;%>
+                            <% ano9 = atencion9.getFullYear();%>
+                             
+                             
+                            <p><%= dia9%>/<%= mes9%>/<%= ano9%></p>
+                         </td>
+                                                       <td><p><%=  task.atencion9_2  %></p></td>
+                                                       <td><p><%=  task.atencion9_3  %></p></td>
+                                                       <td><p><%=  task.atencion9_4  %></p></td>
+                                                       <td><p><%=  task.atencion9_5  %></p></td>
+                                                       <td><p><%=  task.atencion9_6  %></p></td>
+                                   
+                                                        </tr>
+                                                        <tr>
+                                                            
+                        <td>  <%  atencion10=task.atencion10_1;%>
+                            <% dia10 = atencion10.getDate()+1;%>
+                            <% mes10 = atencion10.getMonth() +1;%>
+                            <% ano10 = atencion10.getFullYear();%>
+                             
+                             
+                            <p><%= dia10%>/<%= mes10%>/<%= ano10%></p>
+                         </td>
+                                                           <td><p><%=  task.atencion10_2  %></p></td>
+                                                           <td><p><%=  task.atencion10_3  %></p></td>
+                                                           <td><p><%=  task.atencion10_4  %></p></td>
+                                                           <td><p><%=  task.atencion10_5  %></p></td>
+                                                           <td><p><%=  task.atencion10_6  %></p></td>
+                                       
+                                                            </tr>
+                </tbody>
+                     </table>
+                </section>
+
+                <script src="../public/js/edit.js"></script>
+                            <button type="submit" class="btn btn-primary btn-block"  onclick="odontograma()">Update</button>
+                        </form>
+                    </div>
+                </div>
+         
+            <%- include('partials/footer') %>

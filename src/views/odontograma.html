@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/konva@4.0.0/konva.min.js"></script>
+</head>
+<body>
+    <div id="shape1"></div>
+    <script>
+        //stage
+        var stage = new Konva.Stage({
+        
+            container: 'shape1',
+            width: 400,
+            height:400
+        });
+        //layer1
+        new layer = new Konva.Layer({
+        
+        });
+        
+        //Shape 1
+        var circle = new Konvas.Circle({
+            radius: 40,
+            fill: "blue"
+        });
+        //Add shape 1 to Layer 1
+        layer.add(circle);
+        //Add layer1 to Stage
+        stage.add(layer);
+        
+        </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calendario</title>
+    <link rel="stylesheet"   href="../public/bootstrap/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="../public/css/calendario.css">
+   
+</head>
+<body>
+    <img src="../public/img/calendario.svg" alt="" style="position:absolute; width: 160px; left: 8rem; top: 4rem">
+    <form action="/calendario" method="POST" class="" name="datos">
+    
+        <div class="datos">
+            <div class="">
+                <label class="required">Fecha</label>
+                <input class="form-control date-input" type="date" name="fecha" data-trigger="hover" data-toggle="popover" title="Date" data-content="You can select any date from today clicking on the number in the calendar" required>
+            </div>
+            <div class="">
+                <label>Nombre</label>
+                <input class="form-control" type="text" name="nombre">
+            </div>
+        </div>
+        <div class="">
+            <div class="">
+                <label class="required">Hora de inicio</label>
+                <input class="form-control time-input" type="text" name="hora" required>
+            </div>
+            <div class="">
+                <label class="required">Doctor</label>
+                <input class="form-control time-input" type="text" name="doctor" required>
+            </div>
+        </div>
+       
+        
+
+        <button type="submit" class="btn btn-primary btn-block " style="position:relative; top: 1rem" >Crear Cita</button>
+    </form>
+                    
+    <div class="col form-group">
+    </div>
+
+<table class="table table-bordered table-hover table-striped table-sm" id="appointment_list">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col" class="text-center align-middle">Fecha</th>
+            <th scope="col" class="text-center align-middle">Hora</th>
+            <th scope="col" class="text-center align-middle">Nombres y Apellidos</th>
+            <th scope="col" class="text-center align-middle">Doctor</th>
+       
+        </tr>
+    </thead>
+    <tbody>
+        <% for(var i= 0;  i<tasks.length; i++) { %>
+            <tr>
+                <td><%= tasks[i].fecha %></td>
+                <td><%= tasks[i].hora %></td>
+                <td><%= tasks[i].nombre %></td>
+                <td><%= tasks[i].doctor %></td>
+            </tr>
+            <%}%>
+    </tbody>
+</table>
+
+    <script src="../public/js/calendar"></script>
+</body>
+</html>

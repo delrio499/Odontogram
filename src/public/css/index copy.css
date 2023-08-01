@@ -1,0 +1,164 @@
+.rectangulo_navbar{
+    width: 13rem;
+    height: 1rem;
+    top: 0.9rem;
+    background-color:#2A39FF;
+    position: absolute; 
+    transform:rotate(2deg);
+    z-index: -1;
+}
+
+.rectangulo_links{
+    position: absolute;
+    width: 50rem;
+    top: 5rem;
+    left: 15rem;
+    height:32rem;
+    background-color: #252C82;
+
+}
+
+.iconos{
+    width: 49.6%;
+    display: inline-block;
+    position: relative;
+    padding-left: 8rem;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+.icono{
+    width: 120px;
+    height: 120px;
+}
+.links{
+    background-color: #4C51F2;
+    display: inline-block;
+    position: relative;
+    width: 49.6%;
+    height: 4rem;
+    margin-top: 0rem;
+    padding-top: 1rem;
+}
+.iconos:hover {
+    background-color: #1C115A;
+   
+}
+#icono_pacientes:hover ~ #link_pacientes{
+    background-color: #383CCC;
+   
+}
+#icono_add:hover ~ #link_add{
+    background-color: #383CCC ;
+   
+}
+
+
+.links a, .link_calendario a{
+    color: white;
+    text-decoration: none;
+    margin-left: 7rem;
+    font-size: 20px;
+    
+  }
+ .links a:hover, .link_calendario a:hover{
+    color: white;
+    text-decoration: none;
+  }
+
+.citas{
+    width: 100%;
+    padding-left: 21.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.citas:hover {
+    background-color: #1C115A;
+   
+}
+.citas:hover ~ .link_calendario{
+    background-color: #383CCC ;
+   
+}
+
+.link_calendario{
+    background-color: #4C51F2;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 4rem;
+    margin-top: 0rem;
+    padding-top: 1rem;
+}
+
+<body>
+    <nav>
+      BD Gane Salud Oral
+    </nav>
+    
+      <div class="cuerpo">
+        
+        <div class="iconos" id="icono_pacientes">
+            <a href="/pacientes"> <img class="icono" src="../public/img/pacientes.svg" alt="Kiwi standing on oval" style="padding-bottom:8px;" ></a>
+           </div>
+           <div class="iconos" id="icono_add" >
+            <a href="/add"> <img class="icono" src="../public/img/adduser.svg" alt="Kiwi standing on oval" ></a>
+           
+            
+           </div>
+           <div  id="link_pacientes" class="links">
+            <a href="/pacientes" style="margin-left: 3.5rem;">Pacientes</a>
+               </div>
+              
+         
+           
+                    
+                  
+               
+               
+                    <div id="link_add" class="links">
+                       <a href="/add">Agregar Pacientes </a>
+                        </div>
+        
+          
+          <div class="citas">
+            <a href="/calendar"> <img class="icono_calendario" id="calendario" src="../public/img/calendar.svg" alt="Kiwi standing on oval" ></a>
+          </div>
+          <div class="link_calendario">
+            <a href="/calendario" style="margin-left: 19.5rem;"> <button type="button" class="btn btn-primary">Calendario de Citas</button>  </a>
+          </div>
+      </div>
+</body>
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color:#076ACC ;
+}
+
+nav{
+    color: white;
+    background-color: #076ACC;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    font-size: 23px;
+}
+nav a{
+    
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+}
+nav a:hover{
+    color: white;
+    text-decoration: none;
+}
+.info_paciente {
+    color:white;
+    
+}
+.botones a{
+    font-size: 12px;
+}
+
+<%  meses =[“Enero”, “Febrero”, “Marzo”,“Abril”, “Mayo”, “Junio”, “Julio”, “Agosto”, “Septiembre”, “Octubre”,“Noviembre”, “Diciembre”];%>

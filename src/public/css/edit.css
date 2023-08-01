@@ -1,0 +1,111 @@
+.cuerpo{
+    width: 99%;
+    margin-top: 0rem;
+    margin-left: 8px;
+}
+label{
+    font-size: 15px;
+    color:#034076 ;
+    font-weight: 500;
+
+}
+.input{
+    display: inline-block;
+    position: relative;
+    width:47%;
+    margin-left:1.7rem;
+    margin-top: 0.3em;
+}
+.sub-title{
+    font-size: 1em;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+    margin-left: 2rem;
+    color: white;
+    background-color:#26196E;
+    font-weight: 400;
+    position: absolute;
+    border: #26196E 1px solid;
+    border-radius: 0.3em;
+    padding: 0.3rem;
+    width: 16rem;
+
+    
+}
+.info{
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 2rem 0rem;
+    margin: 0em 1.2rem;
+    margin-top: 5rem;
+}
+#info-personal{
+    margin: 4em 1.2rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding-top: 3.5rem;
+}
+
+.cambiacolor{
+    position: relative;
+    display: block;
+    padding: 2rem 1rem;
+}
+.colorpicker{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: inline-block;
+    border: black 1px solid;
+    border-radius: 8px;
+}
+#yellow{
+    background-color: #ffff40;
+}
+#red{
+    background-color: #ff0000;
+}
+#blue{
+    background-color: #00c3f8;
+}
+#black{
+    background-color: #0d0d0d;
+}
+#delete{
+
+}
+.dientes{ 
+    margin-top:1rem;
+ 
+    position: relative;
+    display: inline-block;
+   
+}
+.dientes_cuadranteuno{ 
+    margin-top:5rem;
+    padding-left: 5rem;
+    position: relative;
+    display: inline-block;
+   
+}
+.dientes_cuadrantedos{ 
+    margin-top:5rem;
+    padding-left: 5rem;
+    position: relative;
+    display: inline-block;
+   
+}
+.dientes_cuadrantecuatro{ 
+    
+    padding-left: 5rem;
+    position: relative;
+    display: inline-block;
+   
+}
+.dientes_cuadrantetres{ 
+
+    padding-left: 5rem;
+    position: relative;
+    display: inline-block;
+   
+}
